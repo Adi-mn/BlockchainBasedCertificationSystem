@@ -1,0 +1,21 @@
+{
+  "name": "blockchain-certificate-verification",
+  "version": "1.0.0",
+  "description": "Decentralized certificate verification system",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../smart-contracts && npm install",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "contracts": "cd smart-contracts && npx hardhat compile",
+    "deploy": "cd smart-contracts && npx hardhat run scripts/deploy.js",
+    "test": "cd smart-contracts && npx hardhat test"
+  },
+  "keywords": ["blockchain", "certificates", "verification", "ipfs", "react", "solidity"],
+  "author": "Certificate Verification Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
